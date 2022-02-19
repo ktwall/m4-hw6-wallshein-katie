@@ -30,6 +30,7 @@ function getPizzaOrder() {
   }
   // to pizza.cost
   // YOUR CODE HERE
+  console.log("current price:", pizza.cost);
 
   var toppings = prompt("Please enter additional toppings (comma separated)")
   // HINT: prompt() will return an empty string "" if the user presses 'OK' without entering a value
@@ -48,6 +49,9 @@ function getPizzaOrder() {
       pizza.cost += toppingsFee;
     }
   }
+  console.log("toppings:", pizza.toppings);
+  console.log("current price:", pizza.cost);
+  
 
     var extraCheese = confirm("Would you like extra cheese?")
     // HINT: confirm() returns a boolean
@@ -61,6 +65,8 @@ function getPizzaOrder() {
       pizza.extraCheese = false;
     }
 
+    console.log("current price:", pizza.cost);
+
     var isDelivery = confirm("Is your order for Delivery?")
     // HINT: confirm() returns a boolean
     // if order is for delivery, set pizza.saleType to "delivery"
@@ -73,6 +79,8 @@ function getPizzaOrder() {
     } else {
       pizza.saleType = "take-out";
     }
+
+    console.log("current price:", pizza.cost);
 
     return pizza
   }
